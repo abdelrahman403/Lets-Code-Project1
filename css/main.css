@@ -7,11 +7,19 @@ body {
     overflow-x: hidden;
 }
 
-button:focus {
+button:hover, button:focus {
     outline: none;
 }
 
 /* ********** end main rules ********** */
+
+/* ********** start my framework ********** */
+
+.playfair-font {
+    font-family: 'Playfair Display', serif;
+}
+
+/* ********** end my framework ********** */
 
 /* ********** start header styling ********** */
 
@@ -21,6 +29,7 @@ header {
     top: 0;
     right: 0;
     left: 0;
+    z-index: 2;
 }
 header.sticky {
     background-color: #fff;
@@ -199,21 +208,63 @@ header nav .list-item a .icon {
 
 /* ********** end header styling ********** */
 
-
-/* 
-    all sections
-*/
+/* ********** start all sections ********** */
 
 .section {
     height: 100%;
+    padding-top: 92px;
 }
 
-/* start main-section styling */
+.section-header .title {
+    font-size: 60px;
+    text-align: right;
+    color: #fff;
+    text-transform: capitalize;
+    opacity: .9;
+    line-height: .8;
+}
+.section-header .title .small {
+    display: block;
+    font-size: 12px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    opacity: .7;
+    letter-spacing: 5px;
+}
+
+
+
+
+
+
+
+/* ********** end all sections ********** */
+
+/* ********** start main-section styling ********** */
 
 .main-section {
-    background-image: url('../images/bg.jpg');
+    background: linear-gradient(rgba(0,0,0,.4), rgba(0,0,0,.4)), url('../images/bg.jpg');
     background-size: cover;
+    background-position: center;
+    padding-top: 200px;
 }
+.main-section .section-body img {
+    margin-top: -50px;
+}
+.main-section .section-body .info {
+    text-align: right;
+    color: #ccc;
+    margin-top: 160px;
+    letter-spacing: .3px;
+    line-height: .3;
+}
+.main-section .section-body .info .small {
+    font-size: 15px;
+}
+.main-section .section-body .info .phone-number {
+    font-size: 33px;
+}
+.main-section .section-body .info .white { color: #fff; }
 
 
 
