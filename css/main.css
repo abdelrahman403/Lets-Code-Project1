@@ -6,6 +6,9 @@ body, html {
 body {
     overflow-x: hidden;
 }
+.height {
+    height: 2000px;
+}
 
 button, button:hover, button:focus {
     outline: none;
@@ -37,6 +40,18 @@ a, a:hover, a:focus {
 }
 .italic {
     font-style: italic;
+}
+.text-center {
+    text-align: center;
+}
+.pattern-bg {
+    background: url('../images/pattern.jpg') repeat;
+}
+.capitalize {
+    text-transform: capitalize;
+}
+.uppercase {
+    text-transform: uppercase;
 }
 
 /* 
@@ -167,7 +182,9 @@ header nav .list-item a .icon {
     
 }
 
-/* Mobile Navigation Styling */
+/* 
+    >> Mobile Navigation Styling
+*/
 
 @media (max-width: 767px) {
     header nav .nav-list {
@@ -256,12 +273,11 @@ header nav .list-item a .icon {
 /* ********** start all sections ********** */
 
 .section {
-    height: 100%;
     padding-top: 92px;
 }
 
 .section-header .section-title {
-    font-size: 60px;
+    font-size: 48px;
     text-align: right;
     color: #000;
     text-transform: capitalize;
@@ -273,14 +289,65 @@ header nav .list-item a .icon {
     font-size: 12px;
     text-transform: uppercase;
     margin-bottom: 20px;
-    opacity: .7;
+    opacity: .6;
     letter-spacing: 5px;
 }
 
-@media(max-width: 767px){
-    .section-header .section-title { 
-        text-align: center;
+
+@media(max-width: 991px) {
+    .section-header .section-title {
+        font-size: 35px;
     }
+}
+
+@media(max-width: 767px) {
+    .section-header .section-title {
+        font-size: 40px;
+        text-align: center;
+        line-height: 1;
+        margin-bottom: 40px;
+    }
+}
+
+@media (max-width: 480px) {
+    .section-header .section-title {
+        font-size: 34px;
+    }
+}
+
+/* 
+    >> card components
+*/
+
+.card {
+    padding: 20px;
+    background-color: #fff;
+}
+.card .card-content .price{
+    width: 85px;
+    height: 85px;
+    border-radius: 50%;
+    background-color: #fff;
+    font-size: 35px;
+    line-height: 85px;
+    margin: -46px auto 0;
+    box-shadow: 0 0 0 5px rgba(255,255,255, .5);
+    position: relative; /* to put the price over image */
+}
+
+/* 
+    >> link button
+*/
+
+.link {
+    display: inline-block;
+    text-decoration: underline;
+    font-size: 16px;
+    margin: 50px 0;
+    margin-left: 50%;
+    transform: translate(-50%, 0);
+    letter-spacing: .5px;
+
 }
 
 
@@ -292,11 +359,12 @@ header nav .list-item a .icon {
     background: linear-gradient(rgba(0,0,0,.4), rgba(0,0,0,.4)), url('../images/bg.jpg');
     background-size: cover;
     background-position: center;
+    height: 100%;
     min-height: 550px;
     padding-top: 200px;
     position: relative;
 }
-.main-section .section-title { color: #fff; }
+.main-section .section-title { color: #fff; font-size: 60px; }
 
 .main-section .section-body { 
     position: absolute;
@@ -321,6 +389,7 @@ header nav .list-item a .icon {
 }
 .main-section .section-body .info .small {
     font-size: 15px;
+    opacity: .7;
 }
 .main-section .section-body .info .phone-number {
     font-size: 33px;
@@ -376,7 +445,7 @@ header nav .list-item a .icon {
 
 .story-section {
     padding-top: 150px;
-    padding-bottom: 80px;
+    padding-bottom: 100px;
 }
 .story-section .section-header .section-title {
     text-align: left;
@@ -406,7 +475,6 @@ header nav .list-item a .icon {
 
 .story-section .video {
     position: relative;
-    z-index: 1;
 }
 .story-section .video:before {
     content:'';
@@ -443,9 +511,6 @@ header nav .list-item a .icon {
     .story-section .video {
         width: 90%;
     }
-    .story-section .section-header .section-title {
-        font-size: 35px;
-    }
     .story-section .section-body .author { margin-top: 35px; }
     .story-section .section-body .reserve-btn {
         margin-top: 35px;
@@ -453,14 +518,11 @@ header nav .list-item a .icon {
 }
 
 @media(max-width: 767px) {
-
-    .story-section { padding-top: 70px; }
+    .story-section { padding: 70px 0; }
     
     .story-section .section-header .section-title {
-        font-size: 44px;
+        font-size: 40px;
         text-align: center;
-        line-height: 1;
-        margin-bottom: 40px;
     }
 
     .story-section .section-body { text-align: center; }
@@ -481,13 +543,17 @@ header nav .list-item a .icon {
     }
 }
 
-@media (max-width: 480px) {
-    .story-section .section-header .section-title {
-        font-size: 34px;
-    }
+/* ********** end our story section styling ********** */
+
+/* ********** start menu section styling ********** */
+
+.menu-section {
+}
+
+.menu-section .section-title {
+    text-align: center;
 }
 
 
-/* ********** end our story section styling ********** */
-
+/* ********** end menu section styling ********** */
 
